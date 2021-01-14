@@ -8,12 +8,6 @@
 		"CnxLocalFile_password": {
 			"value": ""
 		},
-		"CnxLocalFile_properties_typeProperties_host": {
-			"value": "C:/Users/mgabai/Documents/CovidAzure"
-		},
-		"CnxLocalFile_properties_typeProperties_userId": {
-			"value": "BETD\\mgabai"
-		},
 		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 			"value": "https://formationazuremg.azuredatalakestore.net/webhdfs/v1"
 		},
@@ -25,6 +19,12 @@
 		},
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "rg-BDU_EcoleDeLaData"
+		},
+		"CnxLocalFile_properties_typeProperties_host": {
+			"value": "C:/Users/mgabai/Documents/CovidAzure"
+		},
+		"CnxLocalFile_properties_typeProperties_userId": {
+			"value": "BETD\\mgabai"
 		}
 	}
 }

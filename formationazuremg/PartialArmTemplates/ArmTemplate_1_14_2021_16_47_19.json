@@ -6,34 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "formationazuremg"
-		},
-		"CnxLocalFile_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'CnxLocalFile'"
-		},
-		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
-			"type": "string",
-			"defaultValue": "https://formationazuremg.azuredatalakestore.net/webhdfs/v1"
-		},
-		"AzureDataLakeStore1_properties_typeProperties_tenant": {
-			"type": "string",
-			"defaultValue": "544fe47f-5772-488f-81a9-fa9de607ecfa"
-		},
-		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
-			"type": "string",
-			"defaultValue": "32ad602f-d364-45c5-ab7f-b8e199af2da0"
-		},
-		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
-			"type": "string",
-			"defaultValue": "rg-BDU_EcoleDeLaData"
-		},
-		"CnxLocalFile_properties_typeProperties_host": {
-			"type": "string",
-			"defaultValue": "C:/Users/mgabai/Documents/CovidAzure"
-		},
-		"CnxLocalFile_properties_typeProperties_userId": {
-			"type": "string",
-			"defaultValue": "BETD\\mgabai"
 		}
 	},
 	"variables": {
@@ -168,15 +140,13 @@
 						"inputs": [
 							{
 								"referenceName": "ScrCasNationalJournalier",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DstCasNationalJournalier",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -338,15 +308,13 @@
 						"inputs": [
 							{
 								"referenceName": "SrcTestCovid",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DstTestCovid",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -496,15 +464,13 @@
 						"inputs": [
 							{
 								"referenceName": "SrcAgeNouveauxCas",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DstAgeNouveauxCas",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -642,15 +608,13 @@
 						"inputs": [
 							{
 								"referenceName": "SrcHopitalAdmission",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DstHopitaladmission",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -752,15 +716,13 @@
 						"inputs": [
 							{
 								"referenceName": "SrcReponseNationalle",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DstReponseNationalle",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
@@ -806,9 +768,7 @@
 				},
 				"schema": []
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DstCasNationalJournalier')]",
@@ -836,9 +796,7 @@
 				},
 				"schema": []
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DstHopitaladmission')]",
@@ -866,9 +824,7 @@
 				},
 				"schema": []
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DstReponseNationalle')]",
@@ -896,9 +852,7 @@
 				},
 				"schema": []
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DstTestCovid')]",
@@ -926,9 +880,7 @@
 				},
 				"schema": []
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/ScrCasNationalJournalier')]",
@@ -981,9 +933,7 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SrcAgeNouveauxCas')]",
@@ -1044,9 +994,7 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SrcHopitalAdmission')]",
@@ -1103,9 +1051,7 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SrcReponseNationalle')]",
@@ -1150,9 +1096,7 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SrcTestCovid')]",
@@ -1217,58 +1161,6 @@
 					}
 				]
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStore1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureDataLakeStore",
-				"typeProperties": {
-					"dataLakeStoreUri": "[parameters('AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri')]",
-					"tenant": "[parameters('AzureDataLakeStore1_properties_typeProperties_tenant')]",
-					"subscriptionId": "[parameters('AzureDataLakeStore1_properties_typeProperties_subscriptionId')]",
-					"resourceGroupName": "[parameters('AzureDataLakeStore1_properties_typeProperties_resourceGroupName')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/CnxLocalFile')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "FileServer",
-				"typeProperties": {
-					"host": "[parameters('CnxLocalFile_properties_typeProperties_host')]",
-					"userId": "[parameters('CnxLocalFile_properties_typeProperties_userId')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('CnxLocalFile_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "MyLocalFiles",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/MyLocalFiles')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/MyLocalFiles')]",
-			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "SelfHosted",
-				"typeProperties": {}
-			},
 			"dependsOn": []
 		},
 		{
@@ -1283,8 +1175,7 @@
 						"pipelineReference": {
 							"referenceName": "pipeline1",
 							"type": "PipelineReference"
-						},
-						"parameters": {}
+						}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -1294,8 +1185,7 @@
 						"interval": 1,
 						"startTime": "2021-01-14T15:48:00",
 						"endTime": "2021-01-14T18:39:00",
-						"timeZone": "Romance Standard Time",
-						"schedule": {}
+						"timeZone": "Romance Standard Time"
 					}
 				}
 			},
