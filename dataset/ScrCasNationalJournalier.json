@@ -1,5 +1,5 @@
 {
-	"name": "CasNationalJournalier",
+	"name": "ScrCasNationalJournalier",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "CnxLocalFile",
