@@ -5,6 +5,9 @@
 			"referenceName": "CnxLocalFile",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "SourcesCovid"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
