@@ -1302,6 +1302,99 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/pipeline1')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SrcMort')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SourceJohn"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_deaths_global.csv",
+						"folderPath": "Johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SrcConfirmer')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SourceJohn"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_confirmed_global.csv",
+						"folderPath": "Johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SrcGueri')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SourceJohn"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_recovered_global.csv",
+						"folderPath": "Johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
 		}
 	]
 }
