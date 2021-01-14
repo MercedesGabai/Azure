@@ -1,0 +1,26 @@
+{
+	"name": "SrcGueri",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CnxLocalFile",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SourceJohn"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "time_series_covid19_recovered_global.csv",
+				"folderPath": "Johnhopkins"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
